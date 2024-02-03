@@ -1,38 +1,202 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.logo {
+  width: 70px;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 83vh;
+  background-image: url("./images/login.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-radius: 50px;
+}
+
+.hero-bg-filter {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}
+
+#button {
+  transition: 0.3s;
+  transform: translate(10px, 10px);
+}
+
+#button:hover {
+  transform: translate(12px, 12px);
+}
+
+#form {
+  z-index: 100;
+}
+
+#image {
+  object-fit: cover;
+  transform: rotate(17deg);
+  z-index: 10;
+}
+
+.movie-poster {
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  object-fit: cover;
+}
+
+.movie-poster-filter {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  /* backdrop-filter: blur(2px); */
+}
+
+.movie-title {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: fit-content;
+  padding: 0.5rem 2rem;
+  font-size: 25px;
+}
+
+.movie-images {
+  width: 180px;
+}
+
+.btn-prev:hover {
+  transform: translateX(-5px);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-next:hover {
+  transform: translateX(5px);
+  transition: all 0.3s ease-in-out;
+}
+
+.categories-content {
+  width: 70%;
+}
+
+.category-descript {
+  text-align: justify;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.btn-back {
+  z-index: 999;
+}
+
+.bg-detail {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  /* width: 100%;
+  height: 100vh;
+  min-height: 100vh; */
+}
+
+.bg-filter-detail {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.movie-genres {
+  width: 50%;
+}
+
+.movie-overview {
+  width: 75%;
+}
+
+@media (max-width: 768px) {
+  .hero-bg {
+    border-radius: 0;
+    height: 60vh;
+  }
+  
+  .hero-bg-filter {
+    border-radius: 0;
+  }
+
+  .categories-content {
+    width: 100%;
+  }
+
+  .movie-title {
+    font-size: 19px;
+    padding: 10px 15px;
+  }
+
+  .movie-images {
+    width: 160px;
+  }
+
+  .movie-trailer {
+    width: 400px;
+    /* height: 200px; */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 576px) {
+  .movie-poster {
+    width: 100%;
+    height: 60vh;
   }
-  to {
-    transform: rotate(360deg);
+
+  .movie-poster-filter {
+    padding-top: 2rem;
+  }
+
+  .movie-poster-filter h2 {
+    padding-top: 12rem;
+    font-size: 30px;
+  }
+
+  .movie-images {
+    width: 100px;
+  }
+
+  .category-images {
+    width: 100px;
+  }
+
+  .movie-genres {
+    width: 100%;
+  }
+
+  .movie-overview {
+    width: 100%;
+  }
+}
+
+@media (max-width: 460px) {
+  .movie-images {
+    width: 80px;
+  }
+
+  .category-images {
+    width: 80px;
   }
 }
