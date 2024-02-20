@@ -1,6 +1,7 @@
 import { Button, Container, Form, Image } from "react-bootstrap";
 import login from "../images/login.jpg";
 import { FaArrowLeft } from "react-icons/fa";
+import GoogleOAuth from "../components/authentication/GoogleOAuth";
 
 const LoginPage = () => {
   return (
@@ -13,7 +14,10 @@ const LoginPage = () => {
       >
         <FaArrowLeft className="fs-4" />
       </Button>
-      <Container fluid className="h-100 d-flex flex-column justify-content-center align-items-center">
+      <Container
+        fluid
+        className="h-100 d-flex flex-column justify-content-center align-items-center"
+      >
         <Form
           id="form"
           className="bg-light px-md-5 px-sm-3 px-2 py-sm-4 py-2 border d-flex flex-column justify-content-center rounded-3 shadow-lg"
@@ -43,6 +47,7 @@ const LoginPage = () => {
           <Button variant="warning" type="submit" className="fw-semibold">
             Submit
           </Button>
+          <GoogleOAuth />
         </Form>
       </Container>
       <Container className="w-100 h-100 position-absolute d-flex justify-content-center align-items-center overflow-hidden">
@@ -53,3 +58,5 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+
+// AIzaSyCCokhAFMFrti36EfLyvzafEROEnl9Me_0 (google api key)

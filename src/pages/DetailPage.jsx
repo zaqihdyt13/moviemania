@@ -56,7 +56,9 @@ const DetailPage = () => {
         <div className="bg-filter-detail d-flex justify-content-between align-items-start py-5 px-sm-5 px-3">
           <div className="w-100 h-100 d-flex flex-column justify-content-start mt-4">
             <h1 className="text-light fs-1">{detailMovies.original_title}</h1>
-            <h2 className="text-light fs-4 mb-3"><span className="text-warning">Title:</span> {detailMovies.title}</h2>
+            <h2 className="text-light fs-4 mb-3">
+              <span className="text-warning">Title:</span> {detailMovies.title}
+            </h2>
             <h3 className="text-warning fs-5">
               {detailMovies.vote_average}{" "}
               <span className="text-light">/ 10</span>
@@ -64,7 +66,8 @@ const DetailPage = () => {
 
             <div className="d-none">tes</div>
 
-            <div className="movie-genres d-flex flex-wrap mt-3">
+            <div className="movie-genres d-flex flex-wrap align-items-center mt-3 px-2 py-1">
+              <span className="me-2 mb-1">Genres:</span>
               {detailMovies.genres?.map((genre) => (
                 <span
                   key={genre.id}
@@ -74,10 +77,12 @@ const DetailPage = () => {
                 </span>
               ))}
             </div>
-            <p className="movie-overview text-light fs-6 w-md-50 mt-3">{detailMovies.overview}</p>
+            <p className="movie-overview text-light fs-6 w-md-50 mt-3">
+              {detailMovies.overview}
+            </p>
 
             <Button
-              href={`https://www.youtube.com/watch?v=${movieVideos[0]?.key}`}
+              href={`https://www.youtube.com/watch?v=${movieVideos[1]?.key}`}
               variant="success"
               style={{ width: "140px" }}
               className="fw-bold"
@@ -91,9 +96,8 @@ const DetailPage = () => {
               </h3>
               {movieVideos && (
                 <YouTube
-                  videoId={movieVideos[3]?.key}
+                  videoId={movieVideos[0]?.key}
                   opts={{ width: "320", height: "215" }}
-                  // className="movie-trailer"
                 />
               )}
             </div>

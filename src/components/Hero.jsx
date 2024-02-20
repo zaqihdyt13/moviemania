@@ -2,9 +2,9 @@ import logo from "../images/logo.png";
 
 const Hero = () => {
   return (
-    <div className="pt-md-3 pt-0 px-md-5">
-      <div className="hero-bg d-flex h-sm-100">
-        <div className="hero-bg-filter d-flex">
+    <div className="p-0">
+      <div className="hero-bg w-100 d-flex h-sm-100">
+        <div className="hero-bg-filter w-100 h-100 d-flex">
           <div className="d-flex flex-wrap m-auto align-items-center justify-content-center">
             <img src={logo} alt="logo" />
             <div>
