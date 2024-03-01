@@ -2,6 +2,7 @@ import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { FcGoogle } from "react-icons/fc";
 
 const GoogleOAuth = () => {
   const navigate = useNavigate("");
@@ -29,8 +30,8 @@ const GoogleOAuth = () => {
   });
 
   return (
-    <Button onClick={() => loginWithGoogle()} variant="dark">
-      Login with Google
+    <Button onClick={() => loginWithGoogle()} variant="dark" className="fw-bold fs-3 d-flex align-items-center gap-2">
+      <FcGoogle className="fs-2"/><span>Login with Google</span>
     </Button>
   );
 };

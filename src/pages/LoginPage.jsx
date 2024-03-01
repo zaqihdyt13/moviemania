@@ -20,9 +20,9 @@ const LoginPage = () => {
       >
         <Form
           id="form"
-          className="bg-light px-md-5 px-sm-3 px-2 py-sm-4 py-2 border d-flex flex-column justify-content-center rounded-3 shadow-lg"
+          className="bg-warning px-md-5 px-sm-3 px-2 py-sm-4 py-2 d-flex flex-column justify-content-center rounded-3 shadow-lg"
         >
-          <h1 className="mb-md-5 mb-3 text-warning text-decoration-underline fw-bold">
+          {/* <h1 className="mb-md-5 mb-3 text-warning text-decoration-underline fw-bold">
             L<span className="text-dark fst-italic fw-normal">ogin</span>
           </h1>
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -46,7 +46,7 @@ const LoginPage = () => {
           </Form.Group>
           <Button variant="warning" type="submit" className="fw-semibold">
             Submit
-          </Button>
+          </Button> */}
           <GoogleOAuth />
         </Form>
       </Container>

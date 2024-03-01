@@ -5,12 +5,11 @@ import PopularMovie from "../components/PopularMovie";
 import UpcomingMovie from "../components/UpcomingMovie";
 import axios from "axios";
 import Footer from "../components/Footer";
-import { Button } from "react-bootstrap";
+import BannerLogin from "../components/BannerLogin";
 
 const apiKey = "bd0af39a72aa4f0031d784df2908bbb0";
 
 const HomePage = () => {
-  // const [popularMovies, setPopularMovies] = useState([])
   const [popularMoviesNew, setPopularMoviesNew] = useState([]);
   const [upcomingMovies, setUpcomingMovies] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState("");
@@ -65,7 +64,7 @@ const HomePage = () => {
       {isLoggedIn ? (
         <PopularMovie popularMovies={popularMoviesNew} />
       ) : (
-        <Button variant="warning" className="fs-2 fw-bold d-flex mx-auto mt-4">Login Disini</Button>
+        <BannerLogin/>
       )}
       <UpcomingMovie upcomingMovies={upcomingMovies} />
       <Footer />

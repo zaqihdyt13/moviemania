@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="hero-bg w-100 d-flex h-sm-100">
         <div className="hero-bg-filter w-100 h-100 d-flex">
           <div className="d-flex flex-wrap m-auto align-items-center justify-content-center">
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" className="w-25 h-25" />
             <div>
               <h1 className="text-warning text-sm-start text-center fw-bold fst-italic">
                 M
